@@ -1,33 +1,27 @@
 # intersect-training-theme
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+This repository is intended to be a master repository for managing site layouts for training courses
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+See the rendered site [here](https://intersectaustralia.github.io/intersect-training-theme/)
 
-TODO: Delete this and the text above, and describe your gem
+It's a work in progress...
 
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+To use this site in github pages:
+1. Create a new repository and enable GitHub pages. It's recommended to use the `master branch/docs` folder as the source, as this lets you have a private repository (for files you don't want publicly shared), while also allowing a public website in the `/docs` subfolder.
+2. Add a `_config.yml` file to your repository, with the following line:
+ `remote_theme: "IntersectAustralia/intersect-training-theme"``
+Note that if you use the `master branch/docs` folder as your source, this file should be in `/docs`, if not it should be in the root of the repository
+3. Add your markdown files and commit them to your repository. You should have at least an `index.md` file in the GitHub pages source directory.
+4. GitHub pages will build your site for you on ever commit, so just visit the rendered site to see the theme at work.
 
-```ruby
-gem "intersect-training-theme"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: intersect-training-theme
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install intersect-training-theme
+## Updating the themes
+Notes for myself really
+1. Make the changes locally.
+2. If necessary build the gemspec file using: `gem build intersect-training-theme.gemspec`. This does auto-version but should really control releases through GitHub.
+3. Commit and push the changes.
 
 ## Usage
 
@@ -49,4 +43,3 @@ To add a custom directory to your theme-gem, please edit the regexp in `intersec
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-

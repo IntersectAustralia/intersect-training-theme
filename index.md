@@ -10,7 +10,4 @@ title: Intersect Training Layout Master Site
 This site is intended to form a master repository to contain the layout and styling for training materials presented using GitHub pages.
 
 
-To use this site:
-1. Eat cabbage
-2. Chew lettuce
-3. Do something useful
+See the README in the source repository for install instructions on how to use this theme.
