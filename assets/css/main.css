@@ -422,7 +422,7 @@ a:visited { color: #205caa; }
   color: orange;
   font-weight: bold;
   font-size: 14pt;
-  background-image: url('../assets/next.png');
+  background-image: url('../images/next.png');
   background-repeat: no-repeat;
   background-position: 10px 10px;
 }
@@ -434,7 +434,7 @@ a:visited { color: #205caa; }
   color: orange;
   font-weight: bold;
   font-size: 14pt;
-  background-image: url('../assets/objective.png');
+  background-image: url('../images/objective.png');
   background-repeat: no-repeat;
   background-position: 10px 10px;
 }
@@ -443,7 +443,7 @@ a:visited { color: #205caa; }
   padding: 10px;
   padding-left: 40px;
   border-left: solid 2px orange;
-  background-image: url('../assets/finished.png');
+  background-image: url('../images/finished.png');
   background-repeat: no-repeat;
   background-position: 10px 10px;
 }
@@ -455,7 +455,7 @@ a:visited { color: #205caa; }
   padding: 10px;
   padding-left: 40px;
   border-left: solid 2px orange;
-  background-image: url('../assets/note.png');
+  background-image: url('../images/note.png');
   background-repeat: no-repeat;
   background-position: 10px 10px;
 }
