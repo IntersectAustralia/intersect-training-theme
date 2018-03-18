@@ -1,0 +1,22 @@
+<header class="site-header">
+
+  <div class="wrap">
+    <a class="site-title" href="{{ site.baseurl }}/">
+      <img src="{{ site.baseurl }}/assets/logo_learn.png" width="128" border="0" valign="middle"> {{ site.title }}</a>
+    <br/>
+    <br/>
+    <br/>
+    <nav class="site-nav">
+      <div class="trigger">
+        {%- for page in site.pages -%}
+          {%- if page.show-in-nav-bar -%}
+            <a class="page-link" href="{{ page.url | relative_url }}">{{ page.short-title| escape }} </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+    </nav>
+
+  </div>
+
+</header>
