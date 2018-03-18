@@ -18,7 +18,7 @@
 title: Training Layout Master Site
 email: training@intersect.org.au
 description: "A master repository for layout and styling of Intersect training courses"
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/intersect-training-theme" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
