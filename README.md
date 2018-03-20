@@ -10,36 +10,40 @@ It's a work in progress...
 ## Installation
 
 To use this site in github pages:
-1. Create a new repository and enable GitHub pages. It's recommended to use the `master branch/docs` folder as the source, as this lets you have a private repository (for files you don't want publicly shared), while also allowing a public website in the `/docs` subfolder.
-2. Add a `_config.yml` file to your repository, with the following line:
- `remote_theme: "IntersectAustralia/intersect-training-theme"``
-Note that if you use the `master branch/docs` folder as your source, this file should be in `/docs`, if not it should be in the root of the repository
-3. Add your markdown files and commit them to your repository. You should have at least an `index.md` file in the GitHub pages source directory.
-4. GitHub pages will build your site for you on ever commit, so just visit the rendered site to see the theme at work.
+1. Create a new repository and enable GitHub pages. It's recommended to use the `master branch/docs` folder as the source, as this lets you have a private repository (for files you don't want publicly shared), while also allowing a public website in the `docs/` subfolder.
+2. Add a `_config.yml` file to your repository, with the following lines:
 
-## Updating the themes
-Notes for myself really
-1. Make the changes locally.
-2. If necessary build the gemspec file using: `gem build intersect-training-theme.gemspec`. This does auto-version but should really control releases through GitHub.
-3. Commit and push the changes.
+```yaml
+# Site settings
+title: Your site title          # The title of your site
+email: your_email@email.com     # Your email contact address
+description: ""                 # A short description of your site
+licence: ""                     # A statement of the licencing conditions of your site
+baseurl: ""                     # the subpath of your site, e.g. /blog
+url: ""                         # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+remote_theme: "IntersectAustralia/intersect-training-theme"
+markdown: kramdown
+permalink: pretty
+highlighter: rouge
+remote_theme: "IntersectAustralia/intersect-training-theme"
+```
+
+Note that if you use the `master branch/docs` folder as your source, the yml file should be in `/docs`, if not it should be in the root of the repository.
+3. Create your own image files to use in the header and footer of the page and place them in the following location:
+  - `assets/logos/footer_logo.png`
+  - `assets/logos/header_logo.png`
+4. Add your markdown files and commit them to your repository. You should have at least an `index.md` file in the GitHub pages source directory.
+5. GitHub pages will build your site for you on ever commit, so just visit the rendered site to see the theme at work.
+
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `intersect-training-theme.gemspec` accordingly.
+See the following for instructions on how to use this theme:
+- **Module 1:** [Adding Modules](http://127.0.0.1:4000/intersect-training-theme/modules/01-adding-modules/)
+- **Module 2:** [Styling](http://127.0.0.1:4000/intersect-training-theme/modules/02-styling/)
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+With the exception of logos, this theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

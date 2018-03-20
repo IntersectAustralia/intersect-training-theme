@@ -1,6 +1,10 @@
-The MIT License (MIT)
+Copyright (c) 2018 Intersect Australia Ltd
 
-Copyright (c) 2018 RichardPBerry
+This theme is freely licensed under the MIT license below.
+This licence does NOT apply to images relating to Intersect logos, including the corporate logo and Learn.intersect.org.au.
+If you use this theme you must replace these files with your own images.
+
+The MIT License (MIT)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
