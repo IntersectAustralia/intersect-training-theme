@@ -28,6 +28,7 @@ markdown: kramdown
 permalink: pretty
 highlighter: rouge
 remote_theme: "IntersectAustralia/intersect-training-theme"
+```
 
 Note that if you use the `master branch/docs` folder as your source, the yml file should be in `/docs`, if not it should be in the root of the repository.
 
