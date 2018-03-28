@@ -29,7 +29,9 @@ permalink: pretty
 highlighter: rouge
 remote_theme: "IntersectAustralia/intersect-training-theme"
 ```
+
 Note that if you use the `master branch/docs` folder as your source, the yml file should be in `/docs`, if not it should be in the root of the repository.
+
 3. Create your own image files to use in the header and footer of the page and place them in the following location:
   - `assets/logos/footer_logo.png`
   - `assets/logos/header_logo.png`
@@ -42,6 +44,7 @@ Note that if you use the `master branch/docs` folder as your source, the yml fil
 See the following for instructions on how to use this theme:
 - **Module 1:** [Adding Modules](https://intersectaustralia.github.io/intersect-training-theme/modules/01-adding-modules/)
 - **Module 2:** [Styling](https://intersectaustralia.github.io/intersect-training-theme/modules/02-styling/)
+
 
 ## License
 
