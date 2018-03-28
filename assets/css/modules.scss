@@ -1,0 +1,70 @@
+---
+---
+
+//----------------------------------------
+// Colors and images
+//----------------------------------------
+
+// branding
+$color-brand:       orange !default;
+$color-standard:        black;
+
+// images
+$image-objective: url('../images/objective.png');
+$image-note: url('../images/note.png');
+$image-finished: url('../images/finished.png');
+$image-next-link: url('../images/next.png');
+
+//----------------------------------------
+// Specialized blockquote environments for learning objectives, notes, insets, etc.
+//----------------------------------------
+
+//
+@mixin bkSetup($color, $image, $header_weight) {
+  padding: 10px;
+  padding-left: 50px;
+  border-left: solid 2px $color-brand;
+  background-image: $image;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  color: $color;    // font-color
+  font-weight: $header_weight;
+  font-size: 14pt;
+  opacity: 1;
+
+  ul, ol {
+    font-weight: normal;
+    font-size: 14pt;
+    list-style-type: square;
+
+  }
+}
+
+.objective { @include bkSetup($color-brand, $image-objective, bold); }
+.note { @include bkSetup($color-standard, $image-note, normal); }
+.finished { @include bkSetup($color-standard, $image-finished, normal); }
+.next-link { @include bkSetup($color-standard, $image-next-link, bold); }
+
+// Warning
+.warning {
+  padding: 10px;
+  border-left: solid 2px red;
+}
+
+// Inset
+@mixin insetTile($color) {
+  border: solid 2px #aaaaaa;
+  background-color: #eeeeee;
+  padding: 10px 10px 10px 10px;
+  opacity: 1;
+
+  .title {
+      font-weight: bold;
+      font-size: 14pt;
+      color: $color-brand;
+      padding-bottom: 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 { margin: 10px 0 10px;}
+}
+.inset { @include insetTile($color-brand); }
