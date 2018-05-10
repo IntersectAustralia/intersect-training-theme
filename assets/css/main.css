@@ -216,6 +216,12 @@ blockquote {
 .post-content ul,
 .post-content ol { padding-left: 20px; list-style-type: square; }
 
+.post ul,
+.post ol { margin-left: 1.35em; }
+
+/* code and pre-formatted text */
+/* Moved to module.scss by Richard B May 2018 */
+/*
 .post pre,
 .post code {
   border: 1px solid #d5d5e9;
@@ -226,16 +232,20 @@ blockquote {
   border-radius: 3px;
   font-size: 15px;
 }
+*/
+pre, code {
+  border: none;
+  background-color: #eef;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 15px;
+}
 
 
-.post code { padding: 1px 0px; }
-
-.post ul,
-.post ol { margin-left: 1.35em; }
-
-.post pre code { border: none; }
 
 /* terminal */
+/*
 .post pre.terminal {
   border: 1px solid #000;
   background-color: #333;
@@ -245,12 +255,14 @@ blockquote {
   border-radius: 3px;
 }
 
-.post pre.terminal code { background-color: #333; }
+
+ .post pre.terminal code { background-color: #333; }
+*/
 
 /* Syntax highlighting styles */
 /* ----------------------------------------------------------*/
 
-.highlight  { background: #ffffff; }
+.highlight  { background: #eef; padding-left: 2px}
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
@@ -396,11 +408,29 @@ blockquote {
 
 }
 
+
 /*added by LUC 20140603*/
+/*updated by RB 20180510*/
+
+/*
 .page-content img {
   margin-left: 30px;
   padding: 10px;
   border: solid 2px #666666;
+  width: 100%;
+  max-width: 800px;
+}
+*/
+
+
+.page-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  border: solid 2px #666666;
+  width: 100%;
+  max-width: 800px;
 }
 
 .tip {
