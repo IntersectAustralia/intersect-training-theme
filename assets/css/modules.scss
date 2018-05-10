@@ -7,7 +7,15 @@
 
 // branding
 $color-brand:       orange !default;
-$color-standard:        black;
+$color-standard:    black;
+//$color-source:      #6e5494 !default;
+$color-source:      $color-brand !default;
+$color-output:      #303030 !default;
+$color-error:       #bd2c00 !default;
+//$color-output:      #303030 !default;
+
+
+
 
 // images
 $image-objective: url('../images/objective.png');
@@ -16,10 +24,32 @@ $image-finished: url('../images/finished.png');
 $image-next-link: url('../images/next.png');
 
 //----------------------------------------
+// Specialized code blocks.
+//----------------------------------------
+
+@mixin codeBlock($color) {
+  //color: $color;
+  border: 1px solid #d5d5e9;
+  border-left: solid 5px $color;
+  border-radius: 4px 0 0 4px;
+  padding-left: 4px;
+  background-color: #eef;
+}
+
+//.post pre code { @include codeBlock($color-brand); }
+// code { @include codeBlock($color-brand); }
+.error  { @include codeBlock($color-error); }
+.output { @include codeBlock($color-output); }
+.source { @include codeBlock($color-source); }
+
+
+//----------------------------------------
 // Specialized blockquote environments for learning objectives, notes, insets, etc.
 //----------------------------------------
 
 //
+
+// Setup a general structure using a SASS mixin
 @mixin bkSetup($color, $image, $header_weight) {
   padding: 10px;
   padding-left: 50px;
@@ -40,6 +70,7 @@ $image-next-link: url('../images/next.png');
   }
 }
 
+// Invoke the mixin and customise as required
 .objective { @include bkSetup($color-brand, $image-objective, bold); }
 .note { @include bkSetup($color-standard, $image-note, normal); }
 .finished { @include bkSetup($color-standard, $image-finished, normal); }

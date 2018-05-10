@@ -11,19 +11,17 @@ Welcome. This page will show the styling available.
 ## This is header 02
 ### This is header 03
 
-This is a plain blockquote:
+Want to start off with some poetry? Use a plain blockquote by putting `'>'` at the start of each line.
 > The rain in Spain,
 > Falls mainly on the plains.
 
-It's always good to start with some learning objectives. If you have a single objective, you can simply write your objective on a line, then put `{: .objective}` directly after that line. This tells kramdown to style
-the text above using a css class called `objective`.
+It's always good to put some learning objectives up-front. If you have a single objective, you can simply write your objective on a line, then put `{: .objective}` directly after that line. This tells kramdown to style the text above using a css class called `objective`.
 
-There is only one reason for this.
+Objective: To understand the meaning of life, the universe and everything.
 {: .objective}
 
 
-If you have several objectives, they can be styled by using the blockquote character (>) for each line,
-then putting `{: .objective}` after the end of the blockquote.
+If you have several objectives, they can be styled by using the blockquote character (`'>'`) for each line, then putting `{: .objective}` after the end of the blockquote.
 
 > By the time you finish reading this module you should:
 > - Understand what styles are available
@@ -46,21 +44,47 @@ nice background to *distinguish* this from other text.
 {: .inset}
 
 Inline code can be shown using the accent or backtick (\`) character. If you have a block of code you can use
-three accents (\`\`\`)  to start and stop a *fenced code block*. Also, if you tell it what lanuage it is it will highlight it for you. This is GitHub Flavoured Markdown (GFM) at work.
+three accents (\`\`\`)  to start and stop a *fenced code block*.
 
+There are three types of code block supported, which follow the [Software Carpentry](https://software-carpentry.org) convention):
+- Source: Use when you are typing code that someone should type into their computer
+- Output: To show the output of those commands
+- Error: When something has gone wrong
+
+Also, if you tell it what lanuage it is it will highlight it for you. This is GitHub Flavoured Markdown (GFM) at work.
+
+For example, putting this into your markdown document:
+
+~~~
 ```shell
-cd ~
-echo "What a wonderful world" > louis_armstrong.txt
-cat louis_armstrong.txt
+$ cd ~
+$ echo "What a wonderful world" > louis_armstrong.txt
+$ cat louis_armstrong.txt
 ```
+{: .source}
+~~~
 
-If you want to get really fancy, you can add line numbers using [rouge](http://rouge.jneen.net/) syntax.
-{% highlight shell linenos %}
-cd ~
-echo "What a wonderful world" > louis_armstrong.txt
-cat louis_armstrong.txt
-{% endhighlight %}
+Will display like this:
+```shell
+$ cd ~
+$ echo "What a wonderful world" > louis_armstrong.txt
+$ cat louis_armstrong.txt
+```
+{: .source}
 
+After which you can show the output, like this:
+```shell
+What a wonderful world
+```
+{: .output}
+
+Or, if there is an error you can display it like this:
+```Shell
+$ cat louise armstrong.txt
+cat: louise: No such file or directory
+cat: armstrong.txt: No such file or directory
+```
+{: .error}
 
 If you want to mix headings, text and code together in an inset you can do it like this.
 
@@ -72,6 +96,7 @@ If you want to mix headings, text and code together in an inset you can do it li
 > funny = mp.one_liner()
 > print(funny)
 >```
+> {: .source}
 {: .inset}
 
 
