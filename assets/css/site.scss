@@ -1,0 +1,138 @@
+---
+---
+
+/*****************************************************************************/
+/**************************  IMPORTS   ***************************************/
+/*****************************************************************************/
+@import "bootstrap/scss/bootstrap";
+
+
+
+
+/*****************************************************************************/
+/********************  GLOBAL VARIABLES   ************************************/
+/*****************************************************************************/
+// DEFAULT COLOURS
+$color-primary:         orange;
+$color-secondary:       black;
+//$color-source:        $color-primary;
+//$color-output:        $color-primary;
+$color-error:            #bd2c00 !default;
+$color-inset-bg:         #eeeeee;
+$color-inset-border:     #aaaaaa;
+$color-codeblock-bg:     #eef;
+$color-codeblock-border: #d5d5e9;
+
+// ICONS
+$icon-objective: url('../icons/objective.png');
+$icon-note: url('../icons/note.png');
+$icon-finished: url('../icons/finished.png');
+$icon-next-link: url('../icons/next.png');
+$icon-warning: url('../icons/warning-sign.png');
+
+
+
+
+/*****************************************************************************/
+/*****************  OVERIDE BOOTSTRAP STYLING ********************************/
+/*****************************************************************************/
+.container-fluid {
+  padding: 0px 20px;
+  //max-width: 1000px;
+  max-width: 80vw;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+  margin-top: 10px;
+  padding-bottom: 0px;
+}
+
+@mixin headingStyle($color, $font-size, $letter-spacing){
+  font-weight: 300;
+  margin: 20px 0px 20px;
+  color: $color;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+  text-transform: capitalize;
+}
+
+h1  { @include headingStyle($color-secondary, 3rem, -1.75px); }
+h2  { @include headingStyle($color-primary, 3rem, -1.75px); }
+h3  { @include headingStyle($color-secondary, 2.5rem, -1.25px); }
+h4  { @include headingStyle($color-primary, 2rem, -1px); }
+
+pre {
+  border: 1px solid $color-codeblock-border;
+  background-color: $color-codeblock-bg;
+  padding-left: 0.5rem;
+}
+
+// Set default img style to be responsive (max-width: 100%, heigh: auto)
+img {
+  @include img-fluid;
+}
+
+/*****************************************************************************/
+/*****************  CUSTOMISED CLASSES (OBJECTIVES, NOTE, ERROR ETC) *********/
+/*****************************************************************************/
+
+// Setup a general structure using a SASS mixin
+@mixin highlight-base($line-color, $text-color, $icon) {
+  padding: 10px;
+  padding-left: 50px;
+  border-left: solid 4px $line-color;
+  background-image: $icon;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  color: $text-color;
+
+  ul, ol {
+    list-style-type: square;
+  }
+}
+
+// Invoke the mixin and customise as required
+.objective { @include highlight-base($color-primary, $color-primary, $icon-objective); }
+.note { @include highlight-base($color-primary, $color-secondary, $icon-note); }
+.finished { @include highlight-base($color-primary, $color-secondary, $icon-finished); }
+.next-link { @include highlight-base($color-primary, $color-secondary, $icon-next-link); }
+.warning { @include highlight-base($color-error, $color-error, $icon-warning); }
+
+
+/*****************************************************************************/
+/**********************  CUSTOMISED INSETS ***********************************/
+/*****************************************************************************/
+
+
+@mixin insetTile($text-color) {
+  border: solid 2px $color-inset-border;
+  background-color: $color-inset-bg;
+  padding: 10px 10px 10px 10px;
+
+  .title {
+      font-weight: bold;
+      font-size: 14pt;
+      color: $text-color;
+      padding-bottom: 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 { margin: 10px 0 10px;}
+}
+.inset { @include insetTile($color-primary); }
+.challenge { @include insetTile($color-primary); }
+
+
+/*****************************************************************************/
+/**********************  CUSTOMISED CODE BLOCKS ******************************/
+/*****************************************************************************/
+
+@mixin codeblock-base($sidebar-color) {
+  //@extend .pre-scrollable;
+  border-left: solid 0.5rem $sidebar-color;
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.source { @include codeblock-base($color-primary); }
+.output { @include codeblock-base($color-secondary); }
+.error  { @include codeblock-base($color-error); }
