@@ -5,7 +5,7 @@
 /**************************  IMPORTS   ***************************************/
 /*****************************************************************************/
 @import "bootstrap/scss/bootstrap";
-
+@import "rouge.scss";
 
 
 
@@ -15,9 +15,8 @@
 // DEFAULT COLOURS
 $color-primary:         orange;
 $color-secondary:       black;
-//$color-source:        $color-primary;
-//$color-output:        $color-primary;
-$color-error:            #bd2c00 !default;
+$color-img-border:       #666666;
+$color-error:            #bd2c00;
 $color-inset-bg:         #eeeeee;
 $color-inset-border:     #aaaaaa;
 $color-codeblock-bg:     #eef;
@@ -68,9 +67,13 @@ pre {
   padding-left: 0.5rem;
 }
 
-// Set default img style to be responsive (max-width: 100%, heigh: auto)
-img {
+// Set default img style for lesson content to have border, be responsive (max-width: 100%, heigh: auto)
+// And fill available screen space
+// Only apply to the content of the module itself (otherwise affects headers/footers)
+.module-content img {
   @include img-fluid;
+  border: solid 2px $color-img-border;
+  width: 100%;
 }
 
 /*****************************************************************************/

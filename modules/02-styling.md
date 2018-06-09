@@ -60,7 +60,7 @@ No tags
 
 
 ~~~
-```shell
+```Shell
 $ cd ~
 $ echo "What a wonderful world" > louis_armstrong.txt
 $ cat louis_armstrong.txt
@@ -70,7 +70,7 @@ $ cat louis_armstrong.txt
 
 Will display like this:
 
-```shell
+```Shell
 $ cd ~
 $ echo "What a wonderful world" > louis_armstrong.txt
 $ cat louis_armstrong.txt
