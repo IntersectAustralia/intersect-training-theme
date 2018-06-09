@@ -5,7 +5,7 @@ contactmessage: "We value your feedback:"   # Call to action message in the foot
 surveyurl: "http://yoursurvey.com"          # The URL of a feedback or interest survey
 email: your_email@email.com                 # Your email contact address
 licence: "This theme is released under an MIT License. The Learn and Intersect logos are copyright (c) of Intersect Australia Ltd 2018. All rights reserved"      # A statement of the licencing conditions of your site
-baseurl: ""                                 # the subpath of your site, e.g. /blog
+baseurl: "/richard_temp"                                 # the subpath of your site, e.g. /blog
 url: "https://intersectaustralia.github.io"                          # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
