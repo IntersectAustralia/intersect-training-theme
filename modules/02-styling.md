@@ -141,7 +141,7 @@ If you want to mix headings, text and code together in an inset by nesting block
 > ```python
 > import monty_python as mp
 > funny = mp.one_liner()
-> print(funny)
+> print("Tell me something funny: " + funny)
 >```
 > {: .source}
 {: .inset}
@@ -155,7 +155,7 @@ Will render like this:
 > ```python
 > import monty_python as mp
 > funny = mp.one_liner()
-> print(funny)
+> print("Tell me something funny: " + funny)
 >```
 > {: .source}
 {: .inset}
@@ -168,11 +168,6 @@ Say **congratulations** and show your readers a picture of a cake with the `{: .
 {: .finished}
 
 ...or tell people to go to the next module with `{: .next-link}`:
-
-
-Here is some sample Output.
-{: samp}
-
 
 [Go to the next module]({{ site.baseurl }}/modules/02-styling)
 {: .next-link}
