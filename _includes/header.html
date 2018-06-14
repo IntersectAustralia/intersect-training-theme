@@ -1,12 +1,12 @@
 <header>
   <div class="row">
     <div class="col-md-3 align-self-center text-center">
-      <a class="site-title" href="{{ site.baseurl }}/">
+      <a href="{{ site.baseurl }}/">
         <img class="img-fluid" src="{{ site.baseurl }}/assets/logos/header_logo.png" width="192">
       </a>
     </div>
     <div class="col-9 align-self-center">
-      <h1> {{ site.title }} </h1>
+      <h1 class="site-title"> {{ site.title }} </h1>
       <h6 class="text-muted"> {{ site.description }} </h6>
     </div>
   </div>
@@ -28,7 +28,7 @@
         {% endif %}
 
 
-        {% for node in site.pages %}
+        {% for node in site.modules %}
           {% if node.show-in-nav-bar %}
             {% if page.url == node.url %}
               <li class="nav-item active">

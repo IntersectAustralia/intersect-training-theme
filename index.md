@@ -1,31 +1,24 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: course-home
 title: My test site
+show-outline: true
 ---
 
-# Hellloooo!!!
+# Stuff TODO:
+- Fix heading styles to h1 is orange & page title is black - DONE
+- Add support for collapsible panels - DONE
+- Move objectives to YML front matter - DONE
+- Auto create index based on objectives in each module
+- Allow multiple courses in one repository
+- Add landing page for all site content
+- Convert px to rem in styling
+-
+
+
+# You-hoo!
 
 This site is intended is a master repository for layout and styling for training materials presented using GitHub pages.
 
 Blurghy blurghy blurghy
 
-Here is some content in a container
-{: .container}
-
-> The rain in spain,
-> Falls mainly on the plains
-
-
-Here comes some `inline` styling
-
-And a codeblock
-
-```shell
-print("hello")
-```
-
-Alert!
-{: .alert-success}
+Let's see what we have in store...

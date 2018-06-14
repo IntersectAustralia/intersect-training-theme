@@ -5,7 +5,7 @@
 /**************************  IMPORTS   ***************************************/
 /*****************************************************************************/
 @import "bootstrap/scss/bootstrap";
-@import "rouge";
+@import "rouge";    // Syntax highlighting
 
 
 
@@ -23,11 +23,13 @@ $color-codeblock-bg:     #eef;
 $color-codeblock-border: #d5d5e9;
 
 // ICONS
-$icon-objective: url('../icons/objective.png');
-$icon-note: url('../icons/note.png');
-$icon-finished: url('../icons/finished.png');
-$icon-next-link: url('../icons/next.png');
-$icon-warning: url('../icons/warning-sign.png');
+$icon-objective: url('../icons/glyphicons-333-certificate.png');
+$icon-note: url('../icons/glyphicons-346-hand-right.png');
+$icon-finished: url('../icons/glyphicons-279-birthday-cake.png');
+$icon-next-link: url('../icons/glyphicons-174-play.png');
+$icon-warning: url('../icons/glyphicons-79-warning-sign.png');
+$icon-challenge: url('../icons/glyphicons-195-question-sign.png');
+$icon-solution: url('../icons/glyphicons-242-flash.png');
 
 
 
@@ -53,13 +55,14 @@ $icon-warning: url('../icons/warning-sign.png');
   color: $color;
   font-size: $font-size;
   letter-spacing: $letter-spacing;
-  text-transform: capitalize;
 }
 
-h1  { @include headingStyle($color-secondary, 3rem, -1.75px); }
-h2  { @include headingStyle($color-primary, 3rem, -1.75px); }
-h3  { @include headingStyle($color-secondary, 2.5rem, -1.25px); }
-h4  { @include headingStyle($color-primary, 2rem, -1px); }
+.site-title  { @include headingStyle($color-secondary, 3rem, -1.75px); }
+h1  { @include headingStyle($color-primary, 3rem, -1.75px); }
+h2  { @include headingStyle($color-secondary, 3rem, -1.75px); }
+h3  { @include headingStyle($color-primary, 2.5rem, -1.25px); }
+h4  { @include headingStyle($color-secondary, 2rem, -1px); }
+
 
 pre {
   border: 1px solid $color-codeblock-border;
@@ -74,6 +77,12 @@ pre {
   @include img-fluid;
   border: solid 2px $color-img-border;
   width: 100%;
+}
+
+// Force solution buttons to display on newline
+.btn-info {
+  display: block;
+  margin: 0.8rem 0 0.8rem 0;
 }
 
 /*****************************************************************************/
@@ -103,27 +112,30 @@ pre {
 .warning { @include highlight-base($color-error, $color-error, $icon-warning); }
 
 
+
 /*****************************************************************************/
 /**********************  CUSTOMISED INSETS ***********************************/
 /*****************************************************************************/
 
 
-@mixin insetTile($text-color) {
+@mixin insetTile($text-color, $icon, $icon-padding) {
   border: solid 2px $color-inset-border;
   background-color: $color-inset-bg;
-  padding: 10px 10px 10px 10px;
+  padding: 0.8rem;
 
-  .title {
-      font-weight: bold;
-      font-size: 14pt;
-      color: $text-color;
-      padding-bottom: 20px;
+  h1, h2, h3, h4, h5, h6 {
+    @include headingStyle($color-primary, 2.5rem, -1.25px);
+    margin: 0.8rem 0 0.8rem;
+    padding-left: $icon-padding;
+    background-image: $icon;
+    background-repeat: no-repeat;
+    background-position: 0.8rem 0.8rem;
   }
-
-  h1, h2, h3, h4, h5, h6 { margin: 10px 0 10px;}
 }
-.inset { @include insetTile($color-primary); }
-.challenge { @include insetTile($color-primary); }
+
+// Invoke the mixin and customise as required
+.inset { @include insetTile($color-primary, none, 0); }    // plain inset
+.challenge { @include insetTile($color-primary, $icon-challenge, 4.2rem); }    // plain inset
 
 
 /*****************************************************************************/

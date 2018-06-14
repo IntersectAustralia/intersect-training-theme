@@ -17,3 +17,9 @@ highlighter: rouge
 
 sass:
   sass_dir: _sass
+
+# Specify that things in the episodes collection should be output.
+collections:
+  modules:
+    output: true
+    #permalink: /:path/index.html

@@ -10,10 +10,24 @@
       </div>
       <hr/>
 
-      
+
       <div class="container-fluid module-content">
-        <h1>{{ page.title }}</h1>
-        {{ content }}
+        <h1 class="site-title">{{ page.title }}</h1>
+
+        {% if page.show-objectives %}
+          <blockquote class=objective>
+            <p><strong>Learning objectives</strong></p>
+
+              <ul>
+               {% for objective in page.objectives %}
+  	            <li>{{ objective| markdownify }}</li>
+  	           {% endfor %}
+              </ul>
+
+         </blockquote>
+       {% endif %}
+
+      {{ content }}
       </div>
 
       <hr/>
