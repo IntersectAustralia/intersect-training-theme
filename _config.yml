@@ -19,7 +19,17 @@ sass:
   sass_dir: _sass
 
 # Specify that things in the episodes collection should be output.
+#collections_dir: courses
 collections:
-  modules:
+  course001:    # A unique ID for the course
     output: true
-    #permalink: /:path/index.html
+    title: "Theme structure"    # The actual name for the course
+    description: "An overview of how the how this site should be laid out"   # A short description of your site
+    relative_url: "/theme-structure"    # The subpath of the the site, e.g. /course-001
+    permalink: /theme-structure/:name   # Will render links in format '<course-name>/<document-base-filename>'
+  course002:
+    output: true
+    title: "Typograhpy and styling"
+    description: "The available styles and typography and how to use them in your markdown files"   # A short description of your site
+    relative_url: "/typography-and-styling"
+    permalink: /typography-and-styling/:name

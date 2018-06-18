@@ -2,46 +2,14 @@
   <div class="row">
     <div class="col-md-3 align-self-center text-center">
       <a href="{{ site.baseurl }}/">
-        <img class="img-fluid" src="{{ site.baseurl }}/assets/logos/header_logo.png" width="192">
+        <img class="img-fluid" src="{{ site.baseurl }}/assets/logos/sub-brand.png" width="192">
       </a>
     </div>
     <div class="col-9 align-self-center">
-      <h1 class="site-title"> {{ site.title }} </h1>
-      <h6 class="text-muted"> {{ site.description }} </h6>
+      <a href="{{ collection.relative_url | relative_url }}">
+        <h1 class="site-title"> {{ include.name | default: "Name not set in include header.html" }} </h1>
+      </a>
+      <h6 class="text-muted"> {{ include.description | default: "Description not set in include header.html" }} </h6>
     </div>
   </div>
-
-  <nav class="navbar navbar-expand-md navbar-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        {% if page.layout == "course-home" %}
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ site.baseurl }}/"> Home </a>
-          </lis>
-        {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}/"> Home </a>
-          </li>
-        {% endif %}
-
-
-        {% for node in site.modules %}
-          {% if node.show-in-nav-bar %}
-            {% if page.url == node.url %}
-              <li class="nav-item active">
-                <a class="nav-link" href="{{ node.url | relative_url }}">{{ node.short-title | escape }} </a>
-              <li class="nav-item">
-            {% else %}
-              <li class="nav-item">
-                <a class="nav-link" href="{{ node.url | relative_url }}">{{ node.short-title | escape }} </a>
-              <li class="nav-item">
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-  </nav>
 </header>

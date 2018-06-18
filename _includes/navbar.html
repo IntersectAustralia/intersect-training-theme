@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      {% for doc in collection.docs %}
+        {% if doc.is-listable %}
+          {% if page.url == doc.url %}
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ doc.url | relative_url }}">{{ doc.short-title | escape }} </a>
+            <li class="nav-item">
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ doc.url | relative_url }}">{{ doc.short-title | escape }} </a>
+            <li class="nav-item">
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

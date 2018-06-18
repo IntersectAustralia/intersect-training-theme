@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+  {% include head.html %}
+
+    <body>
+      <div class="container-fluid">
+        <div class="jumbotron">
+          {% include header.html name=site.title description=site.description %}
+        </div>
+      <div class="container-fluid">
+
+      <div class="container-fluid">
+        {{ content }}
+
+      </div>
+      <hr/>
+
+      <div class="container-fluid">
+        {% include footer.html %}
+      </div>
+
+    </body>
+</html>
