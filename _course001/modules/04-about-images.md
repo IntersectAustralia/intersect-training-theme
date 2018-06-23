@@ -11,10 +11,10 @@ Now let's have a look at some images. By default, all images will show with a th
 ## Small image
 This is a 557 x 370 pixel image.
 
-![A small image]({{ site.baseurl }}/modules_assets/small_image.jpg)
+![A small image]({{ site.baseurl }}/small_image.jpg)
 
 
 ## Big image
 This is a 6000 x 4000 pixel image.
 
-![A big image]({{ site.baseurl }}/modules_assets/big_image.jpg)
+![A big image]({{ site.baseurl }}/big_image.jpg)

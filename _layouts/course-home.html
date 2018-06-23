@@ -13,6 +13,7 @@
 
       <hr/>
       <div class="container-fluid">
+        <h1 class="site-title">{{ page.title }}</h1>
         {{ content }}
 
         {% if page.show-outline %}
@@ -50,7 +51,7 @@
       <hr/>
 
       <div class="container-fluid">
-        {% include footer.html %}
+        {% include footer.html licence=collection.licence%}
       </div>
     </body>
 </html>

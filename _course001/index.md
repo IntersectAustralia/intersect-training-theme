@@ -1,15 +1,11 @@
 ---
 layout: course-home
-title: Introduction to the Theme Strucutre
+title: Introduction to the Theme Structure
 short-title: "Home" # This will appear in the Nav bar in the header
 is-listable: true
 show-objectives: false
 show-outline: true
 ---
-
-
-
-# You-hoo!
 
 This site is intended is a master repository for layout and styling for training materials presented using GitHub pages.
 

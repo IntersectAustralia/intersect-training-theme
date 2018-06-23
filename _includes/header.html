@@ -6,7 +6,7 @@
       </a>
     </div>
     <div class="col-9 align-self-center">
-      <a href="{{ collection.relative_url | relative_url }}">
+      <a class="site-title-link" href="{{ collection.relative_url | relative_url }}">
         <h1 class="site-title"> {{ include.name | default: "Name not set in include header.html" }} </h1>
       </a>
       <h6 class="text-muted"> {{ include.description | default: "Description not set in include header.html" }} </h6>
