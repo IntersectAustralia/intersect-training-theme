@@ -5,7 +5,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       {% for doc in collection.docs %}
-        {% if doc.is-listable %}
+        {% if doc.show-in-nav-bar %}
           {% if page.url == doc.url %}
             <li class="nav-item active">
               <a class="nav-link" href="{{ doc.url | relative_url }}">{{ doc.short-title | escape }} </a>

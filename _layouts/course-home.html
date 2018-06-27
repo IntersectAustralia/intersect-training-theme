@@ -16,9 +16,8 @@
         <h1 class="site-title">{{ page.title }}</h1>
         {{ content }}
 
-        {% if page.show-outline %}
+        {% if page.show-outline-table %}
           <h1>Outline</h1>
-          <p> Shove an outine table here. </p>
 
           <table class="table table-striped table-hover table-responsive overview-table">
             {% assign module_number = 0 %}
@@ -30,9 +29,9 @@
               </tr>
             </thead>
             {% for module in collection.docs %}
-              {% if module.is-listable and page.url != module.url %}
+              {% if module.show-in-outline and page.url != module.url %}
               <tr>
-                <th scope="row"> {{ module.number }} </td>
+                <th scope="row"> {{ module.outline-number }} </td>
                 <td> <a href="{{ module.url | relative_url }}"> {{ module.title }} </a> </td>
                 <td>
                   <ul>

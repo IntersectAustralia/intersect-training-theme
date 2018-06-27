@@ -1,13 +1,14 @@
-# Site settings
+######## SITE SETTINGS #########
 title: Intersect training theme v2            # The title of your site
 description: "A master repository for layout and styling of Intersect training courses"   # A short description of your site
+repourl: "https://github.com/some_repo"      # The URL of the GitHub repository
 contactmessage: "We value your feedback:"   # Call to action message in the footer
 surveyurl: "http://yoursurvey.com"          # The URL of a feedback or interest survey
 email: your_email@email.com                 # Your email contact address
 baseurl: "/richard_temp"                                 # the subpath of your site, e.g. /blog
 url: "https://intersectaustralia.github.io"                          # the base hostname & protocol for your site, e.g. http://example.com
 
-# Build settings
+######## BUILD SETTINGS #########
 markdown: kramdown
 kramdown:
   input: GFM
@@ -17,20 +18,31 @@ highlighter: rouge
 sass:
   sass_dir: _sass
 
-# Specify that things in the episodes collection should be output.
-#collections_dir: courses
+include: ["courses/"]   # Necessary as Jekyll will exclude directories not beginning with underscore
+
+######## COLLECTIONS #########
+collections_dir: "courses"
 collections:
-  course001:    # A unique ID for the course
-    output: true
-    title: "Theme structure"    # The actual name for the course
-    description: "An overview of how the how this site should be laid out"   # A short description of your site
-    relative_url: "/theme-structure"    # The subpath of the the site, e.g. /course-001
-    permalink: /theme-structure/:path   # Will render links in format '<course-url>/<document-path>/<base-filename>'
+  template:    # A unique ID for the course. Must match a directory name (without the `_` prefix)
+    output: true  # Tell Jekyll to render files in the collection
+    title: "Course template"    # The actual name for the course
+    description: "A copyable directory structure useful as a base for creaing new courses"   # A short description of your site
+    relative_url: "/template"    # The subpath of the the site, e.g. /course-001
+    permalink: /template/:path   # Will render links in format '<course-url>/<document-path>/<base-filename>'
     licence: "This course is released under a catfish wattleburger licence"   # A statement of the licencing conditions of your site
+
+  course001:
+    output: true
+    title: "Theme structure"
+    description: "An overview of how the how this site should be laid out"
+    relative_url: "/theme-structure"
+    permalink: /theme-structure/:path
+    licence: "There should be a licence statement here"
+
   course002:
     output: true
     title: "Typograhpy and styling"
-    description: "The available styles and typography and how to use them in your markdown files"   # A short description of your site
+    description: "The available styles and typography and how to use them in your markdown files"
     relative_url: "/typography-and-styling"
-    permalink: /typography-and-styling/:name
-    licence: "There should be a licence statement here"   # A statement of the licencing conditions of your site
+    permalink: /typography-and-styling/:path
+    licence: "There should be a licence statement here"
