@@ -5,10 +5,10 @@ layout: home
 Welcome. This site is a master repository for a Jekyll theme designed to hold course material.
 It heavily utilises [Jekyll](https://jekyllrb.com/), [Kramdown](https://kramdown.gettalong.org/) and [Liquid Templates](https://shopify.github.io/liquid/) to greatly simplify writing course material in an efficient and web-presentable way.
 
-It is also built on the [Bootstrap v4.1](https://getbootstrap.com/) framework to in order to utilise a common standard, and to make it responsive.
+It is also built on the [Bootstrap v4.1](https://getbootstrap.com/) framework to in order to utilise a common standard, add a lot of pre-built functionality, and to make it responsive.
 
 
-See the source repository here: [{{ site.repourl }}]({{ site.repourl}})
+Find the source repository for this theme here: [{{ site.repourl }}]({{ site.repourl}})
 
 # Stuff To Do:
   - Fix heading styles to h1 is orange & page title is black - DONE
@@ -25,7 +25,7 @@ See the source repository here: [{{ site.repourl }}]({{ site.repourl}})
   - Add private files for instructers - DONE
   - Setup template course - DONE
   - Try collections dir setting again - DONE
-  - Documentation
+  - Documentation - DONE
   - Work out how to install and add to README.md
   - Deploy to GH
 

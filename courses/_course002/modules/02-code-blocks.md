@@ -1,55 +1,21 @@
 ---
 layout: module
-title:  "Module 02: Styling"   # This will appear at the top of the page
-short-title: "Mod. 2" # This will appear in the Nav bar in the header
 show-in-nav-bar: true
-show-objectives: true
+short-title: "Mod. 2"
+title:  "Code blocks"
+show-objectives: false
 objectives:
-- Understand what styles are available
-- Know how to use each style by looking at the markdown of this page
+- Demonstrate how to create inline and blocks of code
+- Demonstrate how to add vertical scroll-bars to code blocks
+- Demonstrate how to use code blocks within insets
+show-in-outline: true
+outline-number: 2
 ---
-
-Welcome. This page will show the styling available. Let's start off with headers. Firstly, on pages where the `module` layout is used, the page title will be automatically shown in the top of the page. You can control the title, and several other parameters through the *YAML frontmatter* at the top of the page (between the `---` symbols).
-
-It's good to put some learning objectives up-front. You can do this through the YAML frontmatter at the top of the file, like this:
-
-~~~
-show-objectives: true
-objectives:
-- Understand what styles are available
-- "Know how to use each style by looking at the markdown of this page"
-~~~
-
-# Typography
-To insert headings use the `#` symobl at the start of the line. For example:
-~~~
-# This is header 1
-## This is header 2
-### This is header 3
-#### This is header 4
-~~~
-
-This is header 1
-## This is header 2
-### This is header 3
-#### This is header 4
-
- objective on a line, then put `{: .objective}` directly after that line. This tells kramdown to style the text above using a css class called `objective`. If you have something important to say, use `{: .note}`.
-
-I have something important to say.
-{: .note}
-
-Got a warning? use `{: .warning}`.
-
-**WARNING**: Don't stand under coconut trees!
-{: .warning}
-
-Examples and exercises are best placed in an `{: .inset}`. This will give you a
-nice background to distinguish this from other text.
-{: .inset}
 
 Inline code can be shown by surround the code with the accent or backtick (\`) character. If you have a block of code you can use three accents (\`\`\`)  to start and stop a *fenced code block*.
 
+
+# Code blocks
 There are three types of code block supported, which follow the [Software Carpentry](https://software-carpentry.org) convention:
 - **Source**: Use when you are typing code that someone should type into their computer
 - **Output**: To show the output of those commands
@@ -91,7 +57,11 @@ cat: armstrong.txt: No such file or directory
 ```
 {: .error}
 
-Have a lot of code or output you want to display? No problem, boostrap (used as the underlying css framework for this theme) will handle that well by automatically inserting horizontal scrollbards. If you also want vertical scrollbars, add the `.pre-scrollable` tag to your markdown. For example:
+# Scrollbars
+
+Is your code wider than the screen width? No problem, Boostrap (used as the underlying css framework for this theme) will handle that well by automatically inserting horizontal scrollbars.
+
+If you also want vertical scrollbars, add the `.pre-scrollable` tag to your markdown. For example:
 
 ~~~
 ```
@@ -100,6 +70,7 @@ Some output here....
 {: .output .pre-scrollable}
 ~~~
 
+For example, check out the horizontal and vertical scrollbars here:
 ```
 ------------------------------------------------------------------------------------- /cm/software/modulefiles --------------------------------------------------------------------------------------
 abaqus/6.14                bzip2/1.0.6                fontconfig/2.12.93         imagemagick/7.0.7          mkldnn/0.12                polymake/3.0               superlu/5.2.0
@@ -132,10 +103,10 @@ bazel/0.6.1                detonate/1.11              gpuarray/0.6.2            
 
 # Mix it up
 
-If you want to mix headings, text and code together in an inset by nesting blockquote (`>`) characters. For example:
+If you want to mix headings, text and code together in an inset, use blockquote (`>`) characters to group them together. For example:
 
 ~~~
-> ## This is an inset in a blockquote
+> # Mixed items in an inset
 > You can use whatever you like in here.
 > It's especially good for examples, because you can mix plain text and code
 > ```python
@@ -149,11 +120,8 @@ If you want to mix headings, text and code together in an inset by nesting block
 
 
 Will render like this:
-> # Heading 01
-> ## Heading 02
-> ### Heading 03
-> #### Heading 04
-> ### This is an inset in a blockquote
+
+> # Mixed items in an inset
 > You can use whatever you like in here.
 > It's especially good for examples, because you can mix plain text and code
 > ```python
@@ -163,22 +131,3 @@ Will render like this:
 >```
 > {: .source}
 {: .inset}
-
-
-
-At the end of a module you should do one of two things:
-
-Tell people to go to the next module with `{: .next-link}`:
-[Go to the next module]({{ site.baseurl }}/modules/02-styling)
-{: .next-link}
-
-
-... or ...
-
-Say **congratulations** and show your readers a picture of a cake with the `{: .finished}` tag.
-{: .finished}
-
-That's it! You've made it to the end.
-
-Have a cake :)
-{: .finished}

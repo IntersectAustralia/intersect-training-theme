@@ -3,7 +3,7 @@ layout: module
 show-in-nav-bar: true
 short-title: "Mod. 4"
 title:  "Instructor notes"
-show-objectives: true
+show-objectives: false
 objectives:
 - Describe how to create notes for instructor's eyes only
 show-in-outline: true
@@ -20,7 +20,7 @@ published: false
 
 There is no need to put use a layout etc in this `.md` file because it will not be rendered.
 
-If you are publishing this through GitHub pages you can still let people access it through a link to the location of the file in the repository, like [this](https://github.com/IntersectAustralia/richard_temp/blob/master/_course001/instructor-notes.md).
+If you are publishing this through GitHub pages you can still let people access it through a link to the location of the file in the repository, like [this](https://github.com/IntersectAustralia/richard_temp/blob/master/courses/_course001/instructor-notes.md).
 
 
 Congratulations, that's it, you are done with this course. Go back to the [site homepage]({{ site.baseurl }}/) to see more
