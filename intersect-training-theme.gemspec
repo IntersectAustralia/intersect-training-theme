@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "intersect-renew-training-theme"
-  spec.version       = "0.0.1"
+  spec.name          = "intersect-training-theme"
+  spec.version       = "1.0"
   spec.authors       = ["RichardPBerry, Intersect Australia"]
   spec.email         = ["training@intersect.org.au"]
 
