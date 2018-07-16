@@ -3,6 +3,8 @@ layout: course-home
 show-in-nav-bar: true
 short-title: "Home"
 title: Introduction to the Theme Structure
+author-rev: "By Dr Richard Berry | 16 Jul 2018"
+show-author-rev: false
 show-outline-table: true
 ---
 

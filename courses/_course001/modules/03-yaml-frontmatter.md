@@ -21,7 +21,7 @@ This layout supports the following parameters:
 
 ```
 ---
-layout: home                    # This sets the layout to be used
+layout: home                                            # This sets the layout to be used
 ---
 ```
 
@@ -32,11 +32,13 @@ This layout supports the following parameters:
 
 ```
 --
-layout: course-home               # This sets the layout to be used
-show-in-navbar: true             # Determine whether to show this page in the navigation bar in the site header
-short-title: "Home"               # Set the text to appear in the nav bar
-title: Introduction to the Theme Structure                       # This will appear in title font at the top of the page
-show-outline-table: true                # Determine whether to show an outline table at the end of the page content
+layout: course-home                                     # This sets the layout to be used
+show-in-navbar: true                                    # Determine whether to show this page in the navigation bar in the site header
+short-title: "Home"                                     # Set the text to appear in the nav bar
+title: Introduction to the Theme Structure              # This will appear in title font at the top of the page
+author-rev: "By Dr Who | 16 Jul 2125"      # Add author and revision details
+show-author-rev: true                                   # Determine whether or not show to show author/revision details below the course home title
+show-outline-table: true                                # Determine whether to show an outline table at the end of the page content
 ---
 ```
 
@@ -47,15 +49,15 @@ This layout supports the following parameters:
 
 ```
 --
-layout: modules                   # This sets the layout to be used
-show-in-navbar: true              # Determine whether to show this page in the navigation bar in the site header
-short-title: "Mod. 3"             # Set the text to appear in the nav bar
-title: "YAML Frontmatter"         # This will appear in title font at the top of the page
-show-objectives: false            # Determine whether to show a list of learning objectives at the top of the page content
-objectives:                       # Nested list of objectives
+layout: modules                                         # This sets the layout to be used
+show-in-navbar: true                                    # Determine whether to show this page in the navigation bar in the site header
+short-title: "Mod. 3"                                   # Set the text to appear in the nav bar
+title: "YAML Frontmatter"                               # This will appear in title font at the top of the page
+show-objectives: false                                  # Determine whether to show a list of learning objectives at the top of the page content
+objectives:                                             # Nested list of objectives
 - Understand the layouts available
 - Understand how to use YAML frontmatter to tailor the look of each page
-show-in-outline: true             # Determine whether to list in the outline table in the course home
-outline-number: 3                 # The module number to display in the outline table. Use blank for none.
+show-in-outline: true                                   # Determine whether to list in the outline table in the course home
+outline-number: 3                                       # The module number to display in the outline table. Use blank for none.
 ---
 ```
