@@ -3,6 +3,8 @@ layout: course-home
 show-in-nav-bar: true
 short-title: "Home"
 title: "A template course structure"
+author-rev: "By Dr Who | 16 Jul 2125"
+show-author-rev: true
 show-outline-table: false
 ---
 

@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "intersect-training-theme"
-  spec.version       = "1.0.0"
+  spec.version       = "1.1.0"
   spec.authors       = ["RichardPBerry, Intersect Australia"]
   spec.email         = ["training@intersect.org.au"]
 
