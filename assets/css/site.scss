@@ -13,14 +13,16 @@
 /********************  GLOBAL VARIABLES   ************************************/
 /*****************************************************************************/
 // DEFAULT COLOURS
-$color-primary:         orange;
-$color-secondary:       black;
+$color-primary:          #0d1a75;
+$color-secondary:        black;
+$color-tertiary:         #bf0dfa;
 $color-img-border:       #666666;
 $color-error:            #bd2c00;
 $color-inset-bg:         #eeeeee;
 $color-inset-border:     #aaaaaa;
 $color-codeblock-bg:     #eef;
 $color-codeblock-border: #d5d5e9;
+// magenta: #bf0dfa
 
 // ICONS
 $icon-objective: url('../icons/glyphicons-333-certificate.png');
@@ -41,7 +43,7 @@ $icon-solution: url('../icons/glyphicons-242-flash.png');
   padding: 0 1.8rem;
   //max-width: 1000px;
   max-width: 75vw;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Lato, sans-serif;
 }
 
 .navbar {
@@ -49,25 +51,30 @@ $icon-solution: url('../icons/glyphicons-242-flash.png');
   padding-bottom: 0rem;
 }
 
-@mixin headingStyle($color, $font-size, $letter-spacing){
+@mixin headingStyle($color, $font-weight, $font-size, $letter-spacing){
   font-weight: 300;
   margin: 1.8rem 0rem 1.8rem;
   color: $color;
   font-size: $font-size;
+  font-weight: $font-weight;
   letter-spacing: $letter-spacing;
 }
 
-h1  { @include headingStyle($color-primary, 3rem, -0.12rem); }
-h2  { @include headingStyle($color-secondary, 3rem, -0.12rem); }
-h3  { @include headingStyle($color-primary, 2.5rem, -0.08rem); }
-h4  { @include headingStyle($color-secondary, 2rem, -0.06rem); }
-.site-title  { @include headingStyle($color-secondary, 3rem, -0.12rem);}
-.site-title-link { color: $color-secondary !important; }    // Overide default blue underline for site-title
+h1  { @include headingStyle($color-primary, 700, 3rem, -0.12rem); }
+h2  { @include headingStyle($color-primary, 600, 2.5rem, -0.12rem); }
+h3  { @include headingStyle($color-primary, 500, 2.0rem, -0.08rem); }
+h4  { @include headingStyle($color-primary, 500, 1.5rem, -0.06rem); }
+.site-title  { @include headingStyle($color-primary, bold, 3rem, -0.12rem);}
+.site-title-link { color: $color-primary !important; }    // Overide default blue underline for site-title
 
 pre {
   border: 0.1rem solid $color-codeblock-border;
   background-color: $color-codeblock-bg;
   padding-left: 0.5rem;
+}
+
+code {
+  color: $color-tertiary;
 }
 
 // Set default img style for lesson content to have border, be responsive (max-width: 100%, heigh: auto)
@@ -111,10 +118,10 @@ pre {
 }
 
 // Invoke the mixin and customise as required
-.objective { @include highlight-base($color-primary, $color-primary, $icon-objective); }
+.objective { @include highlight-base($color-tertiary, $color-tertiary, $icon-objective); }
 .note { @include highlight-base($color-primary, $color-secondary, $icon-note); }
-.finished { @include highlight-base($color-primary, $color-secondary, $icon-finished); }
-.next-link { @include highlight-base($color-primary, $color-secondary, $icon-next-link); }
+.finished { @include highlight-base($color-tertiary, $color-tertiary, $icon-finished); }
+.next-link { @include highlight-base($color-tertiary, $color-tertiary, $icon-next-link); }
 .warning { @include highlight-base($color-error, $color-error, $icon-warning); }
 
 
@@ -130,7 +137,7 @@ pre {
   padding: 0.8rem;
 
   h1, h2, h3, h4, h5, h6 {
-    @include headingStyle($color-primary, 2.5rem, -0.08rem);
+    @include headingStyle($color-primary, 500, 2.0rem, -0.08rem);
     margin: 0.8rem 0 0.8rem;
     padding-left: $icon-padding;
     background-image: $icon;
