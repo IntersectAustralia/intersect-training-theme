@@ -8,3 +8,4 @@ Instructions for updating this theme.
 4. If necessary build the gem file using: `gem build intersect-training-theme.gemspec`.
 5. Commit and push the changes to github on the `next_release` branch
 6. Update any downstream repositories using this theme by pushing empty commits to force a site rebuild.
+ 
