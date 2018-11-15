@@ -83,6 +83,10 @@ code {
 .module-content img {
   @include img-fluid;
   border: solid 0.15rem $color-img-border;
+  max-width: 100%;
+}
+
+.module-content .img-full-width img {
   width: 100%;
 }
 
