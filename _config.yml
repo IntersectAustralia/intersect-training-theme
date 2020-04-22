@@ -5,7 +5,7 @@ repourl: "https://github.com/IntersectAustralia/intersect-training-theme"      #
 companyurl: "https://intersect.org.au"              # The location to send people when clicking your company logo
 sub-brandurl: "https://learn.intersect.org.au"      # The location to send people to when clicking your company sub-brand logo
 contactmessage: "We value your feedback:"           # Call to action message in the footer
-surveyurl: "http://yoursurvey.com"                  # The URL of a feedback or interest survey
+surveyurl: "https://inter.fyi/learn/survey"         # The URL of a feedback or interest survey
 email: your_email@email.com                         # Your email contact address
 baseurl: "/intersect-training-theme"                # the subpath of this site, e.g. /blog
 url: "https://intersectaustralia.github.io"         # the base hostname & protocol for this site, e.g. http://example.com
