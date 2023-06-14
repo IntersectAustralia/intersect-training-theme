@@ -14,8 +14,11 @@
       <hr/>
       <div class="container-fluid">
         <h1 class="site-title">{{ page.title }}</h1>
-        {% if page.show-author-rev %}
-          <h4 class="text-muted"> {{ page.author-rev }} </h6>
+        {% if page.show-owners %}
+          <h4 class="text-muted">Course owners: {{ page.course-owners }} </h4>
+        {% endif %}
+        {% if page.show-contributors %}
+          <h6 class="text-muted">Course contributors: {{ page.course-contributors }} </h6>
         {% endif %}
         {{ content }}
 
